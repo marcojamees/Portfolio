@@ -78,7 +78,7 @@ const Hero = () => {
             transition={{ delay: 0.6 }}
             className="text-2xl md:text-3xl text-muted-foreground mb-12"
           >
-            Analista de Dados
+            Data Analytics & Analytics Engineering
           </motion.p>
 
           <motion.div

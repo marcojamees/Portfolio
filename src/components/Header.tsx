@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -28,9 +29,10 @@ const Header = () => {
       <nav className="container mx-auto px-6 flex justify-between items-center">
         <motion.div
           whileHover={{ scale: 1.05 }}
-          className="text-2xl font-bold text-gradient cursor-pointer"
+          className="cursor-pointer"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          JMP
+          <img src={logo} alt="Logo" className="h-20 w-auto" />
         </motion.div>
 
         <ul className="hidden md:flex space-x-8">
