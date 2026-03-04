@@ -2,25 +2,32 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ExternalLink, Github } from "lucide-react";
+import segurosImg from "@/assets/seguros.jpg";
 
 const projects = [
   {
     title: "Dashboard de Vendas Interativo",
-    description: "Sistema de visualização de dados em tempo real com métricas de vendas, análise de tendências e previsões usando machine learning.",
+    description:
+      "Sistema de visualização de dados em tempo real com métricas de vendas, análise de tendências e previsões usando machine learning.",
     tech: ["Python", "Plotly", "SQL", "Scikit-learn"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
   },
   {
     title: "Análise Preditiva de Churn",
-    description: "Modelo de machine learning para prever e reduzir a taxa de cancelamento de clientes, aumentando a retenção em 25%.",
-    tech: ["Python", "TensorFlow", "Pandas", "Power BI"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+    description:
+      "Modelo de machine learning para prever e reduzir a taxa de cancelamento de clientes, aumentando a retenção em 25%.",
+    tech: ["Python"],
+    image: segurosImg,
+    link: "https://medium.com/@james.marco118/renova%C3%A7%C3%A3o-de-seguros-a75c6d216a25",
   },
   {
     title: "ETL Pipeline Automatizado",
-    description: "Pipeline de dados completo para extração, transformação e carga de dados de múltiplas fontes com processamento em lote.",
+    description:
+      "Pipeline de dados completo para extração, transformação e carga de dados de múltiplas fontes com processamento em lote.",
     tech: ["Apache Airflow", "PostgreSQL", "Python", "Docker"],
-    image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=600&fit=crop",
   },
 ];
 
@@ -88,16 +95,32 @@ const Projects = () => {
                   {/* Back */}
                   <div className="absolute inset-0 backface-hidden rotate-y-180">
                     <div className="glass rounded-2xl h-full flex flex-col items-center justify-center p-6 bg-primary/10">
-                      <h3 className="text-2xl font-bold mb-6 text-gradient">{project.title}</h3>
+                      <h3 className="text-2xl font-bold mb-6 text-gradient">
+                        {project.title}
+                      </h3>
                       <div className="flex gap-4">
-                        <motion.button
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.9 }}
-                          className="px-6 py-3 bg-primary text-primary-foreground rounded-full flex items-center gap-2 smooth-transition hover:glow-effect"
-                        >
-                          <ExternalLink size={18} />
-                          Ver Projeto
-                        </motion.button>
+                        {project.link ? (
+                          <motion.a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            className="px-6 py-3 bg-primary text-primary-foreground rounded-full flex items-center gap-2 smooth-transition hover:glow-effect"
+                          >
+                            <ExternalLink size={18} />
+                            Ver Projeto
+                          </motion.a>
+                        ) : (
+                          <motion.button
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            className="px-6 py-3 bg-primary text-primary-foreground rounded-full flex items-center gap-2 smooth-transition hover:glow-effect"
+                          >
+                            <ExternalLink size={18} />
+                            Ver Projeto
+                          </motion.button>
+                        )}
                         <motion.button
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}

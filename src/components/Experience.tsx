@@ -5,22 +5,22 @@ import { Briefcase, Calendar } from "lucide-react";
 
 const experiences = [
   {
-    title: "Senior Data Analyst",
-    company: "Tech Solutions Inc.",
-    period: "2021 - Presente",
-    description: "Liderança de projetos de análise de dados, implementação de dashboards estratégicos e modelos preditivos que resultaram em aumento de 30% na eficiência operacional.",
+    title: "Analytics Engineer",
+    company: "Uoledtech",
+    period: "2025 - Presente",
+    description: "Minha responsabilidade é projetar e gerenciar modelos de dados para a BU Workforce, coletando, transformando e estruturando informações para análises avançadas. Desenvolvo pipelines de dados, mantenho documentação técnica atualizada e aplico práticas de engenharia de software, garantindo qualidade, confiabilidade e escalabilidade das soluções. Traduzo dados complexos em insights claros e acionáveis para clientes e equipes executivas, construindo dashboards estratégicos e relatórios que facilitam a tomada de decisão.",
   },
   {
-    title: "Data Analyst",
-    company: "Global Analytics Corp.",
-    period: "2019 - 2021",
-    description: "Desenvolvimento de pipelines ETL, análise exploratória de dados e criação de relatórios automatizados para diferentes departamentos da empresa.",
+    title: "Analista de Dados PL",
+    company: "Uoledtech",
+    period: "2024 - 2025",
+    description: "Atuei como principal desenvolvedor de soluções analíticas para clientes da BU Workforce, liderando o desenvolvimento de pipelines ETL, integração de dados e automação de relatórios. Realizei análises exploratórias avançadas para identificar padrões, gerar insights acionáveis e apoiar decisões estratégicas. Criei dashboards interativos e relatórios customizados para diferentes áreas da empresa, garantindo qualidade e consistência dos dados. Colaborei com equipes multifuncionais para alinhar entregas às necessidades do cliente, promovendo melhorias operacionais e aumentando a eficiência na entrega dos dados.",
   },
   {
-    title: "Junior Data Analyst",
-    company: "Data Insights Ltd.",
-    period: "2017 - 2019",
-    description: "Análise de dados de vendas, suporte na implementação de ferramentas de BI e elaboração de visualizações de dados para apresentações executivas.",
+    title: "Analista de Dados Jr",
+    company: "Uoledtech",
+    period: "2022 - 2024",
+    description: "Responsável pela análise de dados comerciais e construção de dashboards executivos em Power BI, apoiando decisões estratégicas e acompanhamento de KPIs. Contribuí para a estruturação de soluções de Business Intelligence, melhoria da qualidade dos dados e geração de insights orientados a performance e crescimento de receita.",
   },
 ];
 
