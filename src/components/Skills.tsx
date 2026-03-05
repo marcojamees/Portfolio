@@ -1,19 +1,39 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Database, BarChart3, Brain, Code2, Layers, FileSpreadsheet, GitBranch, Warehouse, Workflow, ShieldCheck, TrendingUp } from "lucide-react";
+import {
+  Database,
+  BarChart3,
+  Brain,
+  Code2,
+  Layers,
+  FileSpreadsheet,
+  GitBranch,
+  Warehouse,
+  Workflow,
+  ShieldCheck,
+  TrendingUp,
+} from "lucide-react";
+
+const levelLabels: Record<number, string> = {
+  1: "Iniciante",
+  2: "Básico",
+  3: "Intermediário",
+  4: "Avançado",
+  5: "Expert",
+};
 
 const skills = [
-  { name: "SQL & Data Modeling", icon: Database, level: 95 },
-  { name: "Semantic Layer (Power BI & Looker)", icon: Layers, level: 93 },
-  { name: "Data Warehousing (BigQuery)", icon: Warehouse, level: 92 },
-  { name: "dbt & Data Transformation", icon: GitBranch, level: 90 },
-  { name: "ETL / ELT Pipelines", icon: Workflow, level: 89 },
-  { name: "Data Visualization & Storytelling", icon: BarChart3, level: 88 },
- // { name: "Data Quality & Testing", icon: ShieldCheck, level: 87 },
-  { name: "Python for Data Analysis", icon: Code2, level: 85 },
-  { name: "Statistical Analysis", icon: TrendingUp, level: 83 },
-  { name: "Excel & Business Analysis", icon: FileSpreadsheet, level: 80 }
+  { name: "SQL & Data Modeling", icon: Database, rating: 5 },
+  { name: "Semantic Layer (Power BI & Looker)", icon: Layers, rating: 5 },
+  { name: "Data Warehousing (BigQuery)", icon: Warehouse, rating: 5 },
+  { name: "dbt & Data Transformation", icon: GitBranch, rating: 5 },
+  { name: "ETL / ELT Pipelines", icon: Workflow, rating: 4 },
+  { name: "Data Visualization & Storytelling", icon: BarChart3, rating: 4 },
+  // { name: "Data Quality & Testing", icon: ShieldCheck, rating: 4 },
+  { name: "Python for Data Analysis", icon: Code2, rating: 4 },
+  { name: "Statistical Analysis", icon: TrendingUp, rating: 4 },
+  { name: "Excel & Business Analysis", icon: FileSpreadsheet, rating: 4 },
 ];
 
 const Skills = () => {
@@ -54,15 +74,25 @@ const Skills = () => {
                     <h3 className="text-xl font-semibold">{skill.name}</h3>
                   </div>
 
-                  <div className="relative h-2 bg-secondary rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={isInView ? { width: `${skill.level}%` } : {}}
-                      transition={{ delay: index * 0.1 + 0.3, duration: 1, ease: "easeOut" }}
-                      className="absolute h-full bg-gradient-to-r from-primary to-primary-glow"
-                    />
+                  <div className="mt-2 flex items-center justify-between">
+                    <div className="flex gap-1">
+                      {Array.from({ length: 5 }).map((_, i) => (
+                        <span
+                          key={i}
+                          className={
+                            i < skill.rating
+                              ? "text-primary"
+                              : "text-muted-foreground/30"
+                          }
+                        >
+                          ★
+                        </span>
+                      ))}
+                    </div>
+                    <p className="text-xs text-muted-foreground">
+                      {levelLabels[skill.rating] ?? "Iniciante"}
+                    </p>
                   </div>
-                  <p className="text-sm text-muted-foreground mt-2 text-right">{skill.level}%</p>
                 </motion.div>
               );
             })}

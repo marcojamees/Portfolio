@@ -12,14 +12,16 @@ const projects = [
     tech: ["Python", "Plotly", "SQL", "Scikit-learn"],
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+    showGithub: true,
   },
   {
     title: "Análise Preditiva de Churn",
     description:
       "Modelo de machine learning para prever e reduzir a taxa de cancelamento de clientes, aumentando a retenção em 25%.",
-    tech: ["Python"],
+    tech: ["Python, Excel"],
     image: segurosImg,
     link: "https://medium.com/@james.marco118/renova%C3%A7%C3%A3o-de-seguros-a75c6d216a25",
+    showGithub: false,
   },
   {
     title: "ETL Pipeline Automatizado",
@@ -28,6 +30,7 @@ const projects = [
     tech: ["Apache Airflow", "PostgreSQL", "Python", "Docker"],
     image:
       "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=600&fit=crop",
+    showGithub: true,
   },
 ];
 
@@ -121,14 +124,16 @@ const Projects = () => {
                             Ver Projeto
                           </motion.button>
                         )}
-                        <motion.button
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.9 }}
-                          className="px-6 py-3 glass rounded-full flex items-center gap-2 smooth-transition"
-                        >
-                          <Github size={18} />
-                          Código
-                        </motion.button>
+                        {project.showGithub && (
+                          <motion.button
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            className="px-6 py-3 glass rounded-full flex items-center gap-2 smooth-transition"
+                          >
+                            <Github size={18} />
+                            Código
+                          </motion.button>
+                        )}
                       </div>
                     </div>
                   </div>
