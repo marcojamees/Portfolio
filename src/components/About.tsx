@@ -25,7 +25,7 @@ const About = () => {
               transition={{ delay: 0.2 }}
               className="text-lg text-muted-foreground leading-relaxed mb-6"
             >
-              Sou Analista de Dados focado em transformar dados brutos em insights estratégicos que apoiam decisões de negócio. Tenho experiência na coleta, processamento e análise de grandes volumes de dados, utilizando ferramentas analíticas e linguagens de programação para gerar informações que impulsionam crescimento, eficiência e performance organizacional.
+              Sou entusiasta dos Dados, focado em transformar dados brutos em insights estratégicos que apoiam decisões de negócio. Tenho experiência na coleta, processamento e análise de grandes volumes de dados, utilizando ferramentas analíticas e linguagens de programação para gerar informações que impulsionam crescimento, eficiência e performance organizacional.
               Atuo na construção de dashboards e relatórios dinâmicos que oferecem visibilidade clara dos principais indicadores de desempenho, sempre com foco em gerar impacto real e acionável para as áreas de negócio.
             </motion.p>
 

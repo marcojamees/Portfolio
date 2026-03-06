@@ -15,10 +15,10 @@ const projects = [
     showGithub: true,
   },
   {
-    title: "Análise Preditiva de Churn",
+    title: "Análise de Churn de Seguros",
     description:
-      "Modelo de machine learning para prever e reduzir a taxa de cancelamento de clientes, aumentando a retenção em 25%.",
-    tech: ["Python, Excel"],
+      "Esta análise investiga os principais fatores que influenciam a renovação de apólices de seguros, buscando compreender quais variáveis impactam a decisão dos clientes de permanecer ou não com uma seguradora.",
+    tech: ["Python", "Excel"],
     image: segurosImg,
     link: "https://medium.com/@james.marco118/renova%C3%A7%C3%A3o-de-seguros-a75c6d216a25",
     showGithub: false,
